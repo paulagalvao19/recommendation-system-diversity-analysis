@@ -1,0 +1,29 @@
+
+[A[A[A[D[B[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[D
+__pycache__/
+
+[A*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.ipynb_checkpoints/
+# Ambientes virtuais
+.venv/
+venv/
+env/
+
+# IDE/SO
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Dados brutos
+data/
+
+# Saídas grandes
+outputs/recommendations_topN.csv
+
+# Logs
+*.log
+
