@@ -288,27 +288,35 @@ def avaliar_modelos(user_para_itens_treino: Dict[int, set],
     metricas_df = pd.DataFrame(linhas)
     return recs_df, metricas_df
 
-def plotar_metricas(metricas_df: pd.DataFrame, caminho_png: str):
-    """Desenha um gráfico simples comparando ILD e Cobertura por modelo."""
-    fig, eixo1 = plt.subplots(figsize=(8, 5))
-    x = np.arange(len(metricas_df))
-    largura = 0.35
+def plot_metrics(metrics_df: pd.DataFrame, outpath: str):
+    plt.style.use('seaborn-v0_8-whitegrid')
+    fig, ax1 = plt.subplots(figsize=(8, 5))
 
-    eixo1.bar(x - largura/2, metricas_df["ILD_medio"], largura, label="ILD médio")
-    eixo1.set_ylabel("ILD médio")
-    eixo1.set_xticks(x)
-    eixo1.set_xticklabels(metricas_df["modelo"])
-    eixo1.set_xlabel("Modelo")
+    x = np.arange(len(metrics_df))
+    width = 0.35
 
-    eixo2 = eixo1.twinx()
-    eixo2.bar(x + largura/2, metricas_df["Cobertura"], largura, label="Cobertura")
-    eixo2.set_ylabel("Cobertura (proporção)")
+    ax1.bar(x - width/2, metrics_df["ILD_medio"], width, label="ILD médio", color="#1f77b4")
+    ax1.set_ylabel("ILD médio", fontsize=11)
+    ax1.set_xlabel("Modelo", fontsize=11)
+    ax1.set_xticks(x)
+    ax1.set_xticklabels(metrics_df["modelo"], fontsize=10)
+    ax1.tick_params(axis='y', labelsize=9)
 
-    eixo1.set_title("Comparação de Diversidade (ILD) e Cobertura por Modelo")
+    # Barras de Cobertura no eixo secundário
+    ax2 = ax1.twinx()
+    ax2.bar(x + width/2, metrics_df["Cobertura"], width, label="Cobertura", color="#ff7f0e")
+    ax2.set_ylabel("Cobertura (proporção)", fontsize=11)
+    ax2.tick_params(axis='y', labelsize=9)
+
+    # Título e legenda
+    plt.title("Comparação de Diversidade (ILD) e Cobertura por Modelo", fontsize=13, weight='bold', pad=15)
+    fig.legend(loc="upper center", bbox_to_anchor=(0.5, -0.05), ncol=2, frameon=False)
     fig.tight_layout()
-    plt.savefig(caminho_png, dpi=160)
-    plt.close(fig)
 
+    # Fundo branco
+    fig.patch.set_facecolor("white")
+    plt.savefig(outpath, dpi=200, bbox_inches="tight")
+    plt.close(fig)
 
 # =========================
 # PROGRAMA PRINCIPAL
@@ -402,7 +410,7 @@ def main():
 
     recs_df_out.to_csv(caminho_recs, index=False, encoding="utf-8")
     metricas_df.to_csv(caminho_metricas, index=False, encoding="utf-8")
-    plotar_metricas(metricas_df, caminho_grafico)
+    plot_metrics(metricas_df, caminho_grafico)
 
 
     print("\n==> Métricas agregadas")
