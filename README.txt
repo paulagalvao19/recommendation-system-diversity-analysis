@@ -23,7 +23,5 @@ Saídas esperadas (pasta outputs/):
   - metrics.png                -> Gráfico comparando as métricas
 
 Observações importantes:
-- O erro "Object of type int64 is not JSON serializable" foi corrigido convertendo
-  os índices de itens para int nativo antes do json.dumps.
 - Se aparecer erro de dados, confirme que a pasta data/ml-latest-small contém
   movies.csv e ratings.csv (já incluso aqui).
