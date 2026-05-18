@@ -1,27 +1,89 @@
-TCC Diversidade – Execução rápida
+# Recommendation System Diversity Analysis
 
-1) Python 3.10+ instalado. No Windows, abra "Prompt de Comando" dentro da pasta do projeto.
+This project analyzes diversity in recommendation systems using different recommendation approaches, including:
 
-2) Crie e ative um ambiente virtual:
-   Windows:
-     python -m venv .venv
-     .venv\Scripts\activate
+- Popularity-based recommendation
+- Similarity-based recommendation
+- MMR (Maximal Marginal Relevance)
 
-   macOS / Linux:
-     python3 -m venv .venv
-     source .venv/bin/activate
+The study evaluates how different recommendation strategies impact content diversity and recommendation quality.
 
-3) Instale as dependências:
-     pip install -r requirements.txt
+---
 
-4) Execute:
-     python main.py
+## 📊 Objectives
 
-Saídas esperadas (pasta outputs/):
-  - recommendations_topN.csv   -> Recomendações por usuário e modelo
-  - metrics.csv                -> ILD médio e cobertura por modelo
-  - metrics.png                -> Gráfico comparando as métricas
+- Compare recommendation models
+- Measure diversity metrics
+- Analyze recommendation coverage
+- Evaluate personalization effects
 
-Observações importantes:
-- Se aparecer erro de dados, confirme que a pasta data/ml-latest-small contém
-  movies.csv e ratings.csv (já incluso aqui).
+---
+
+## 🧠 Metrics Used
+
+- ILD (Intra-List Diversity)
+- Coverage
+- Recommendation diversity
+
+---
+
+## 🛠️ Tech Stack
+
+- Python
+- Pandas
+- NumPy
+- Recommendation Systems
+- Data Analysis
+
+---
+
+## 📁 Outputs
+
+The project generates:
+
+- Recommendation lists
+- Diversity metrics
+- Comparative visualizations
+- Performance analysis
+
+---
+
+## 🚀 How to Run
+
+### 1. Create virtual environment
+
+```bash
+python -m venv .venv
+```
+
+### 2. Activate environment
+
+Windows:
+
+```bash
+.venv\Scripts\activate
+```
+
+Linux/macOS:
+
+```bash
+source .venv/bin/activate
+```
+
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run project
+
+```bash
+python main.py
+```
+
+---
+
+## 📌 Context
+
+This repository is part of an undergraduate thesis focused on algorithmic personalization and content diversity in digital platforms.
