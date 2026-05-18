@@ -1,25 +1,42 @@
-# Recommendation System Diversity Analysis
+# Algorithmic Personalization Analysis
 
-This project analyzes diversity in recommendation systems using different recommendation approaches, including:
+This repository contains my undergraduate thesis focused on analyzing the effects of algorithmic personalization on content diversity in digital platforms.
+
+The study evaluates how different recommendation strategies influence content exposure, recommendation diversity, and catalog coverage.
+
+---
+
+## 📚 Research Context
+
+Recommendation systems strongly influence how users consume content on digital platforms.
+
+This project investigates how recommendation approaches can either reinforce repetitive consumption patterns or increase content diversity.
+
+The analysis compares different recommendation models and evaluates their impact using diversity metrics.
+
+---
+
+## 🎯 Objectives
+
+- Analyze recommendation diversity
+- Compare recommendation strategies
+- Evaluate catalog coverage
+- Study personalization effects on content exposure
+- Measure diversity metrics in recommendation systems
+
+---
+
+## 🧠 Recommendation Models
+
+The project evaluates three recommendation approaches:
 
 - Popularity-based recommendation
 - Similarity-based recommendation
 - MMR (Maximal Marginal Relevance)
 
-The study evaluates how different recommendation strategies impact content diversity and recommendation quality.
-
 ---
 
-## 📊 Objectives
-
-- Compare recommendation models
-- Measure diversity metrics
-- Analyze recommendation coverage
-- Evaluate personalization effects
-
----
-
-## 🧠 Metrics Used
+## 📊 Metrics Used
 
 - ILD (Intra-List Diversity)
 - Coverage
@@ -32,58 +49,31 @@ The study evaluates how different recommendation strategies impact content diver
 - Python
 - Pandas
 - NumPy
+- Machine Learning
 - Recommendation Systems
 - Data Analysis
 
 ---
 
-## 📁 Outputs
+## 📌 Main Findings
 
-The project generates:
-
-- Recommendation lists
-- Diversity metrics
-- Comparative visualizations
-- Performance analysis
+- Popularity models concentrated recommendations on highly engaged content.
+- Similarity-based recommendations reinforced individual preferences with lower internal diversity.
+- MMR-based recommendations achieved a better balance between personalization and diversity.
 
 ---
 
-## 🚀 How to Run
+## 📄 Thesis Document
 
-### 1. Create virtual environment
-
-```bash
-python -m venv .venv
-```
-
-### 2. Activate environment
-
-Windows:
-
-```bash
-.venv\Scripts\activate
-```
-
-Linux/macOS:
-
-```bash
-source .venv/bin/activate
-```
-
-### 3. Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### 4. Run project
-
-```bash
-python main.py
-```
+The complete undergraduate thesis is available in PDF format within this repository.
 
 ---
 
-## 📌 Context
+## 🎓 Academic Information
 
-This repository is part of an undergraduate thesis focused on algorithmic personalization and content diversity in digital platforms.
+Computer Science — Universidade FUMEC  
+Belo Horizonte, Brazil — 2024
+
+Authors:
+- Paula Galvão
+- Giordana Faria
